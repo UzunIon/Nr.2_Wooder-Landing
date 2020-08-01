@@ -258,16 +258,16 @@
 
 <!-- HAMBURGER -->
     <script>
-        let tog = document.getElementById(`toggle`);
+        let toggleIcon = document.getElementById(`toggle`);
         let iu = document.getElementById(`menu`);
-        tog.addEventListener(`click`, () => { 
-            tog.classList.toggle(`open`);
+        toggleIcon.addEventListener(`click`, () => { 
+            toggleIcon.classList.toggle(`open`);
             iu.classList.toggle(`opened`);
             
-            if( tog.className === `open`){
-                document.body.style.overflow = 'hidden';
+            if( toggleIcon.classList.contains(`open`)){
+                document.body.classList.add('no-scroll');
             }else{
-                document.body.style.overflow = 'visible';
+                document.body.classList.remove('no-scroll');
             }
         })
     </script>
