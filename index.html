@@ -10,7 +10,7 @@
 </head>
 <body>
     <!------------------ Header ------------------>
-    <header class="header">
+    <header id="home" class="header">
         <!-- Header Background -->
         <div class="header-background">
             <div class="left-img"></div>
@@ -32,19 +32,19 @@
                         <ul class="main-nav__list">
                             <h3 class="main-nav__logo">Wooder</h3>
                             <li class="main-nav__item">
-                                <a class="main-nav__link" href="#">Home</a>
+                                <a class="main-nav__link" href="#home">Home</a>
                             </li>
                             <li class="main-nav__item">
-                                <a class="main-nav__link" href="#">Products</a>
+                                <a class="main-nav__link" href="#products">Products</a>
                             </li>
                             <li class="main-nav__item">
-                                <a class="main-nav__link" href="#">About</a>
+                                <a class="main-nav__link" href="#about">About</a>
                             </li>
                         </ul>
                     </div>
-                    <button class="main-nav__btn-info">
+                    <a href="#" class="main-nav__btn-info">
                         <img class="main-nav__btn-img" src="image/header/info-button.png" alt="" >
-                    </button>
+                    </a>
                 </nav>
             </div>
             <!-- /Navbar -->
@@ -86,7 +86,7 @@
     <main class="main">
 
         <!-- Section Products -->
-        <section class="products">
+        <section id="products" class="products">
             <div class="container">
 
                 <!-- Products Furniture -->
@@ -215,7 +215,7 @@
 
 
         <!-- Section About Us -->
-        <section class="about-us">
+        <section id="about" class="about-us">
             <div class="container">
                 <div class="inner">
                     <div class="about-img">
@@ -245,7 +245,7 @@
     <footer class="footer">
         <div class="container">
             <div class="inner">
-                <span class="copyright">@ 2016 Wooder</span>
+                <span class="copyright">&copy; 2016 Wooder</span>
                 <h3 class="logo">Wooder</h3>
                 <h6 class="author">Designed by <a href="#">Viacheslav Olianishyn</a> </h6>
             </div>
@@ -259,17 +259,31 @@
 <!-- HAMBURGER -->
     <script>
         let toggleIcon = document.getElementById(`toggle`);
-        let iu = document.getElementById(`menu`);
+        let menu = document.getElementById(`menu`);
+        // let menuLink = document.querySelectorAll('.main-nav__link');
+
         toggleIcon.addEventListener(`click`, () => { 
             toggleIcon.classList.toggle(`open`);
-            iu.classList.toggle(`opened`);
-            
+            menu.classList.toggle(`opened`);
             if( toggleIcon.classList.contains(`open`)){
                 document.body.classList.add('no-scroll');
+                document.querySelectorAll('.main-nav__link').forEach(item => {
+                    item.addEventListener('click', event => {
+                        toggleIcon.classList.remove('open');
+                        menu.classList.remove('opened');
+                        document.body.classList.remove('no-scroll');
+                    })
+                })
             }else{
                 document.body.classList.remove('no-scroll');
             }
         })
+        
+                
+        
+        // .addEventListener(`click`, () => {
+        //     menu.classList.remove('opened');
+        //  })
     </script>
 
 <!-- /HAMBURGER -->

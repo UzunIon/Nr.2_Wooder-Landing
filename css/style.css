@@ -493,7 +493,7 @@ body {
 }
 
 .header .navbar .main-nav {
-  padding: 20px 0;
+  padding: 20px 15px;
 }
 
 .header .navbar .main-nav .main-nav__list {
@@ -501,13 +501,7 @@ body {
 }
 
 .header .main-nav__btn-info {
-  border: none;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
-  background: #fff;
-  background: rgba(255, 255, 255, 0);
-  outline: none;
-  text-decoration: none;
+  justify-self: flex-end;
 }
 
 .header .main-nav__btn-info .main-nav__btn-img {
