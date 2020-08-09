@@ -616,18 +616,19 @@ body {
   .header #menu .main-nav__logo {
     display: block;
     position: relative;
+    text-transform: uppercase;
     line-height: 1em;
     margin: 0 0 0.5em 0;
-    font-size: 4em;
+    font-size: 3.5em;
     color: #bea67c;
   }
   .header #menu .main-nav__logo:before {
     position: absolute;
     content: '';
-    width: 71px;
+    width: 78px;
     height: 3px;
-    left: 63px;
-    top: 39px;
+    left: 57px;
+    top: 50%;
     background-color: #ffffff;
   }
   .header #menu .main-nav__list {
@@ -768,7 +769,7 @@ body {
     padding: 0 10px;
     color: #7a7a78;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 700;
   }
   .header .navbar .main-nav .main-nav__list .main-nav__item .main-nav__link:after {
@@ -793,9 +794,9 @@ body {
   }
   .header .navbar .main-nav .main-nav__list .main-nav__item:nth-child(2) .main-nav__link:hover:after {
     opacity: 1;
-    -webkit-transform: scaleX(16);
-        -ms-transform: scaleX(16);
-            transform: scaleX(16);
+    -webkit-transform: scaleX(24);
+        -ms-transform: scaleX(24);
+            transform: scaleX(24);
   }
   .header .navbar .main-nav .main-nav__list .main-nav__item:nth-child(3) .main-nav__link:hover {
     color: #bea67c;
@@ -805,9 +806,9 @@ body {
   }
   .header .navbar .main-nav .main-nav__list .main-nav__item:nth-child(3) .main-nav__link:hover:after {
     opacity: 1;
-    -webkit-transform: scaleX(30);
-        -ms-transform: scaleX(30);
-            transform: scaleX(30);
+    -webkit-transform: scaleX(44);
+        -ms-transform: scaleX(44);
+            transform: scaleX(44);
   }
   .header .navbar .main-nav .main-nav__list .main-nav__item:nth-child(4) .main-nav__link:hover {
     color: #bea67c;
@@ -817,9 +818,9 @@ body {
   }
   .header .navbar .main-nav .main-nav__list .main-nav__item:nth-child(4) .main-nav__link:hover:after {
     opacity: 1;
-    -webkit-transform: scaleX(20);
-        -ms-transform: scaleX(20);
-            transform: scaleX(20);
+    -webkit-transform: scaleX(28);
+        -ms-transform: scaleX(28);
+            transform: scaleX(28);
   }
 }
 
@@ -976,14 +977,14 @@ body {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 10%;
+    padding-top: 5%;
   }
   .header .header-content .center-column .title {
-    line-height: 0.6;
+    line-height: 1;
   }
   .header .header-content .center-column .center-column__btn {
     width: 140px;
-    margin: 13% 0 10% 0;
+    margin: 25px 0 20px 0;
     padding: 9px 0;
   }
   .header .header-content .center-column .content-scroll__icon {
@@ -1008,14 +1009,14 @@ body {
 
 @media (min-width: 769px) and (max-width: 991px) {
   .header .header-content {
-    padding-top: 10%;
+    padding-top: 5%;
   }
   .header .header-content .center-column .title {
-    line-height: 0.6;
+    line-height: 1;
   }
   .header .header-content .center-column .center-column__btn {
     width: 150px;
-    margin: 13% 0 10% 0;
+    margin: 30px 0 25px 0;
     padding: 9px 0;
   }
   .header .header-content .center-column .content-scroll__icon {
@@ -1049,15 +1050,16 @@ body {
 
 @media (min-width: 992px) {
   .header .header-content {
-    padding-top: 12%;
+    padding-top: 10%;
   }
   .header .header-content .center-column .title {
     line-height: 1;
   }
   .header .header-content .center-column .center-column__btn {
-    width: 180px;
+    min-width: 180px;
+    max-width: 300px;
     margin: 9% 0 11% 0;
-    padding: 10px 0;
+    padding: 10px 20px;
   }
   .header .header-content .right-column {
     padding: 1.6em 0;
@@ -1173,9 +1175,7 @@ body {
 
 .main .products .products-furniture .products-furniture__text .link {
   position: relative;
-  font-size: 12px;
-  font-size: -webkit-calc(10px + 5 * ((100vw - 320px) / 820));
-  font-size: calc(10px + 5 * ((100vw - 320px) / 820));
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1205,7 +1205,7 @@ body {
 }
 
 .main .products .products-furniture .products-furniture__text .link:hover:before {
-  width: 85px;
+  width: 92px;
 }
 
 .main .products .products-furniture .products-furniture__img {
@@ -1255,11 +1255,11 @@ body {
     display: none;
   }
   .main .products .products-furniture .furniture-img {
-    width: 90%;
+    width: 80%;
   }
 }
 
-@media (min-width: 577px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .main .products .products-furniture {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1289,7 +1289,7 @@ body {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 769px) {
   .main .products .products-furniture {
     padding: 120px 0;
   }
@@ -1352,8 +1352,7 @@ body {
 
 .main .products .products-decor .products-decor__text .link {
   position: relative;
-  font-size: -webkit-calc(12px + 2 * ((100vw - 320px) / 820));
-  font-size: calc(12px + 2 * ((100vw - 320px) / 820));
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1383,7 +1382,7 @@ body {
 }
 
 .main .products .products-decor .products-decor__text .link:hover:before {
-  width: 85px;
+  width: 92px;
 }
 
 .main .products .products-decor .products-decor__img {
@@ -1470,11 +1469,11 @@ body {
             order: 2;
   }
   .main .products .products-decor .products-decor__img .decor-img {
-    width: 90%;
+    width: 80%;
   }
 }
 
-@media (min-width: 577px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .main .products .products-decor {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1514,7 +1513,7 @@ body {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 769px) {
   .main .products .products-decor {
     padding-bottom: 120px;
   }
@@ -2036,9 +2035,7 @@ body {
 
 .main .about-us .inner .about-text .link {
   position: relative;
-  font-size: 12px;
-  font-size: -webkit-calc(12px + 2 * ((100vw - 320px) / 820));
-  font-size: calc(12px + 2 * ((100vw - 320px) / 820));
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2068,7 +2065,7 @@ body {
 }
 
 .main .about-us .inner .about-text .link:hover:before {
-  width: 85px;
+  width: 92px;
 }
 
 .main .about-us .about-us_decor-word {
